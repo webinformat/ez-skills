@@ -7,7 +7,7 @@ this repository.
 
 | Plugin | Skills |
 | --- | --- |
-| `ez-core` | `wdyr` — researched recommendations |
+| `ez-core` | `wdyr` — researched recommendations; `auto-run` — work without stopping (with `/goal`) |
 
 ## Install in Claude Code
 
