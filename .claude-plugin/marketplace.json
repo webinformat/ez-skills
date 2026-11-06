@@ -1,0 +1,14 @@
+{
+  "name": "ez-skills",
+  "description": "Ciprian's shared agent skills, edited only in this repository",
+  "owner": {
+    "name": "Ciprian"
+  },
+  "plugins": [
+    {
+      "name": "ez-core",
+      "source": "./plugins/ez-core",
+      "description": "Core working skills: wdyr (researched recommendations)"
+    }
+  ]
+}
