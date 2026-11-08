@@ -3,5 +3,12 @@
   "description": "Core working skills: wdyr (researched recommendations), auto-run (work without stopping)",
   "author": {
     "name": "Ciprian"
+  },
+  "userConfig": {
+    "research_dir": {
+      "type": "directory",
+      "title": "wdyr research folder",
+      "description": "Folder where wdyr saves each recommendation's research. Leave empty to save only when your instructions name a folder."
+    }
   }
 }

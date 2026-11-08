@@ -33,11 +33,19 @@ The user gets one pick they can act on, not a survey.
 3. **Decide.** Rank against the constraints: fit with what exists,
    maintenance, security, simplicity, cost, performance (in that order unless
    the user named a priority). Pick one.
-4. **Save** the research when the user's instructions name a research folder:
-   `YYYYMMDD-HHmm-<slug>.md` with the question, timestamp, every option with
-   its number and condition, sources with dates, and what was not checked.
-   When the user picks, append `## Selected` (option, timestamp, the user's
-   words); rewrite nothing earlier.
+4. **Save** the research to a folder, picked in this order:
+   1. the plugin setting `research_dir`: `${user_config.research_dir}` — not
+      set when that value is empty or still shows as a `${user_config…}`
+      placeholder;
+   2. when the setting is not set, the research folder the user's
+      instructions name;
+   3. when neither names a folder, save nothing and leave **Saved** out of
+      the reply.
+
+   The file is `YYYYMMDD-HHmm-<slug>.md` with the question, timestamp, every
+   option with its number and condition, sources with dates, and what was not
+   checked. When the user picks, append `## Selected` (option, timestamp, the
+   user's words); rewrite nothing earlier.
 5. **Reply** in the format below, then stop. A recommendation is not approval
    to implement it.
 
