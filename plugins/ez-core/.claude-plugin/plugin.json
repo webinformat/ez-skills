@@ -1,6 +1,6 @@
 {
   "name": "ez-core",
-  "description": "Core working skills: wdyr (researched recommendations), auto-run (work without stopping), ccf (group changed files into commits)",
+  "description": "Core working skills: wdyr (researched recommendations), auto-run (work without stopping), ccf (group changed files into commits), check-code (DRY, SSOT and best-practice audit)",
   "author": {
     "name": "Ciprian"
   },
@@ -24,6 +24,16 @@
       "type": "string",
       "title": "ccf daily logs",
       "description": "Comma-separated globs with YYYYMMDD (e.g. time/YYYYMMDD.md). Today's file is left out of commits; earlier days are grouped."
+    },
+    "coding_guides": {
+      "type": "string",
+      "title": "check-code shared coding guides",
+      "description": "Comma-separated folders of coding guides that check-code reads besides the repo's own rules. Leave empty to use only the repo's rules and official sources."
+    },
+    "audit_dir": {
+      "type": "string",
+      "title": "check-code audit folder",
+      "description": "Folder where check-code writes audit files; <project> stands for the repo's folder name (e.g. /work/org/<project>/tasks/audits). Leave empty to write no audit files."
     }
   }
 }
