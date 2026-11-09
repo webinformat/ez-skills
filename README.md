@@ -7,7 +7,7 @@ this repository.
 
 | Plugin | Skills |
 | --- | --- |
-| `ez-core` | `wdyr` — researched recommendations; `auto-run` — work without stopping (with `/goal`) |
+| `ez-core` | `wdyr` — researched recommendations; `auto-run` — work without stopping (with `/goal`); `ccf` — group changed files into commits |
 
 ## Install in Claude Code
 

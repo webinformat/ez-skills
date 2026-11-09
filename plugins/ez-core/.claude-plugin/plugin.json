@@ -1,6 +1,6 @@
 {
   "name": "ez-core",
-  "description": "Core working skills: wdyr (researched recommendations), auto-run (work without stopping)",
+  "description": "Core working skills: wdyr (researched recommendations), auto-run (work without stopping), ccf (group changed files into commits)",
   "author": {
     "name": "Ciprian"
   },
@@ -9,6 +9,21 @@
       "type": "directory",
       "title": "wdyr research folder",
       "description": "Folder where wdyr saves each recommendation's research. Leave empty to save only when your instructions name a folder."
+    },
+    "org_repo": {
+      "type": "directory",
+      "title": "ccf org repo",
+      "description": "Repo that `ccf org` uses. Leave empty if you have none."
+    },
+    "project_dirs": {
+      "type": "string",
+      "title": "ccf project folders",
+      "description": "Comma-separated folders that hold project repos, so `ccf <project>` finds <folder>/<project>."
+    },
+    "daily_logs": {
+      "type": "string",
+      "title": "ccf daily logs",
+      "description": "Comma-separated globs with YYYYMMDD (e.g. time/YYYYMMDD.md). Today's file is left out of commits; earlier days are grouped."
     }
   }
 }

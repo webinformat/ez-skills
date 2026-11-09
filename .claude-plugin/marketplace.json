@@ -8,7 +8,7 @@
     {
       "name": "ez-core",
       "source": "./plugins/ez-core",
-      "description": "Core working skills: wdyr (researched recommendations), auto-run (work without stopping)"
+      "description": "Core working skills: wdyr (researched recommendations), auto-run (work without stopping), ccf (group changed files into commits)"
     }
   ]
 }
