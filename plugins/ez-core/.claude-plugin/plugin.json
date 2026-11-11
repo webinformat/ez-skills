@@ -1,6 +1,6 @@
 {
   "name": "ez-core",
-  "description": "Core working skills: wdyr (researched recommendations), auto-run (work without stopping), ccf (group changed files into commits), check-code (DRY, SSOT and best-practice audit)",
+  "description": "Core working skills: wdyr (researched recommendations), auto-run (work without stopping), ccf (group changed files into commits), check-code (DRY, SSOT and best-practice audit), short-message (plain-text message to send)",
   "author": {
     "name": "Ciprian"
   },
@@ -34,6 +34,11 @@
       "type": "string",
       "title": "check-code audit folder",
       "description": "Folder where check-code writes audit files; <project> stands for the repo's folder name (e.g. /work/org/<project>/tasks/audits). Leave empty to write no audit files."
+    },
+    "plain_letters": {
+      "type": "boolean",
+      "title": "short-message plain letters",
+      "description": "Write messages without diacritics (Romanian a, s, t instead of ă, ș, ț). Leave off to spell each language normally."
     }
   }
 }
