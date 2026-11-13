@@ -1,6 +1,6 @@
 {
   "name": "ez-core",
-  "description": "Core working skills: wdyr (researched recommendations), auto-run (work without stopping), ccf (group changed files into commits), check-code (DRY, SSOT and best-practice audit), short-message (plain-text message to send)",
+  "description": "Core working skills: wdyr (researched recommendations), auto-run (work without stopping), ccf (group changed files into commits), check-code (DRY, SSOT and best-practice audit), short-message (plain-text message to send), olcm (commit messages for the current changes)",
   "author": {
     "name": "Ciprian"
   },
@@ -12,8 +12,8 @@
     },
     "org_repo": {
       "type": "directory",
-      "title": "ccf org repo",
-      "description": "Repo that `ccf org` uses. Leave empty if you have none."
+      "title": "ccf and olcm org repo",
+      "description": "Repo that `ccf org` uses and where olcm also looks for task docs. Leave empty if you have none."
     },
     "project_dirs": {
       "type": "string",
@@ -39,6 +39,11 @@
       "type": "boolean",
       "title": "short-message plain letters",
       "description": "Write messages without diacritics (Romanian a, s, t instead of ă, ș, ț). Leave off to spell each language normally."
+    },
+    "ticket_url": {
+      "type": "string",
+      "title": "olcm ticket URL",
+      "description": "Base URL put before a task ticket stored as a path (e.g. https://example.monday.com/), so olcm appends a full link. Leave empty to append the ticket as stored."
     }
   }
 }
