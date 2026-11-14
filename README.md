@@ -7,7 +7,7 @@ this repository.
 
 | Plugin | Skills |
 | --- | --- |
-| `ez-core` | `wdyr` — researched recommendations; `auto-run` — work without stopping (with `/goal`); `ccf` — group changed files into commits; `check-code` — DRY, SSOT and best-practice audit; `short-message` — plain-text message to send; `olcm` — commit messages for the current changes |
+| `ez-core` | `wdyr` — researched recommendations; `auto-run` — work without stopping (with `/goal`); `ccf` — group changed files into commits; `check-code` — DRY, SSOT and best-practice audit; `short-message` — plain-text message to send; `olcm` — commit messages for the current changes; `refine-prompt` — handoff prompt for a fresh chat from rough notes |
 
 ## Install in Claude Code
 

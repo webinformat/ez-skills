@@ -1,6 +1,6 @@
 {
   "name": "ez-core",
-  "description": "Core working skills: wdyr (researched recommendations), auto-run (work without stopping), ccf (group changed files into commits), check-code (DRY, SSOT and best-practice audit), short-message (plain-text message to send), olcm (commit messages for the current changes)",
+  "description": "Core working skills: wdyr (researched recommendations), auto-run (work without stopping), ccf (group changed files into commits), check-code (DRY, SSOT and best-practice audit), short-message (plain-text message to send), olcm (commit messages for the current changes), refine-prompt (handoff prompt for a fresh chat from rough notes)",
   "author": {
     "name": "Ciprian"
   },
