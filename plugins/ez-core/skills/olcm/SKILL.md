@@ -15,6 +15,8 @@ argument-hint: "[scope: staged | <paths> | <commit range>]"
 
 # olcm — commit messages
 
+**Placeholders.** Where a path or value below still shows a `${…}` placeholder instead of a real value, fill it in yourself: the plugin-root placeholder (named `CLAUDE_PLUGIN_ROOT`) is this plugin's folder, two levels above the folder that holds this file; a settings placeholder (named `user_config.<name>`) is the value of `<name>` under `"ez-core"` in `~/.config/ez-skills/settings.json` (`$XDG_CONFIG_HOME/ez-skills/settings.json` when that variable is set). A missing file or key means the setting is empty.
+
 Arguments: `$ARGUMENTS`
 
 Two turns, always: turn 1 is the messages and a question; turn 2 is the
@@ -23,8 +25,8 @@ the messages.
 
 ## Settings
 
-A plugin setting is not set when its value is empty or still shows as a
-`${user_config…}` placeholder.
+A plugin setting is not set when its value is empty or the settings file has
+no such key.
 
 - Org repo: `${user_config.org_repo}` — a second place to look for task docs.
 - Ticket URL: `${user_config.ticket_url}` — base URL put before a ticket

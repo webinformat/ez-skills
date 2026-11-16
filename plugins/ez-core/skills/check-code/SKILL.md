@@ -15,6 +15,8 @@ argument-hint: "[paths | base-branch] [auto-fix=false]"
 
 # check-code
 
+**Placeholders.** Where a path or value below still shows a `${…}` placeholder instead of a real value, fill it in yourself: the plugin-root placeholder (named `CLAUDE_PLUGIN_ROOT`) is this plugin's folder, two levels above the folder that holds this file; a settings placeholder (named `user_config.<name>`) is the value of `<name>` under `"ez-core"` in `~/.config/ez-skills/settings.json` (`$XDG_CONFIG_HOME/ez-skills/settings.json` when that variable is set). A missing file or key means the setting is empty.
+
 Arguments: `$ARGUMENTS`
 
 Four checks over a scope: **DRY**, **SSOT**, **language best practices** and
@@ -23,8 +25,8 @@ linter's: passing lint or a clean `/code-review` is never a clean check-code.
 
 ## Settings
 
-A plugin setting is not set when its value is empty or still shows as a
-`${user_config…}` placeholder.
+A plugin setting is not set when its value is empty or the settings file has
+no such key.
 
 - Shared coding guides: `${user_config.coding_guides}` (comma-separated
   folders)

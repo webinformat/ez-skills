@@ -12,14 +12,16 @@ argument-hint: "[what the message says]"
 
 # short-message
 
+**Placeholders.** Where a path or value below still shows a `${…}` placeholder instead of a real value, fill it in yourself: the plugin-root placeholder (named `CLAUDE_PLUGIN_ROOT`) is this plugin's folder, two levels above the folder that holds this file; a settings placeholder (named `user_config.<name>`) is the value of `<name>` under `"ez-core"` in `~/.config/ez-skills/settings.json` (`$XDG_CONFIG_HOME/ez-skills/settings.json` when that variable is set). A missing file or key means the setting is empty.
+
 Arguments: `$ARGUMENTS`
 
 The message is a draft for the user to send; never send or post it.
 
 ## Settings
 
-A plugin setting is not set when its value is empty or still shows as a
-`${user_config…}` placeholder.
+A plugin setting is not set when its value is empty or the settings file has
+no such key.
 
 - Plain letters: `${user_config.plain_letters}` — `true` → write without
   diacritics from the first draft (Romanian `a`, `i`, `s`, `t`, not `ă`, `â`,

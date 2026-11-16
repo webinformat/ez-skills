@@ -11,6 +11,8 @@ description: >-
 
 # wdyr — What Do You Recommend
 
+**Placeholders.** Where a path or value below still shows a `${…}` placeholder instead of a real value, fill it in yourself: the plugin-root placeholder (named `CLAUDE_PLUGIN_ROOT`) is this plugin's folder, two levels above the folder that holds this file; a settings placeholder (named `user_config.<name>`) is the value of `<name>` under `"ez-core"` in `~/.config/ez-skills/settings.json` (`$XDG_CONFIG_HOME/ez-skills/settings.json` when that variable is set). A missing file or key means the setting is empty.
+
 Every recommendation comes from research done in this turn, never from memory.
 The user gets one pick they can act on, not a survey.
 
@@ -35,8 +37,7 @@ The user gets one pick they can act on, not a survey.
    the user named a priority). Pick one.
 4. **Save** the research to a folder, picked in this order:
    1. the plugin setting `research_dir`: `${user_config.research_dir}` — not
-      set when that value is empty or still shows as a `${user_config…}`
-      placeholder;
+      set when that value is empty or the settings file has no such key;
    2. when the setting is not set, the research folder the user's
       instructions name;
    3. when neither names a folder, save nothing and leave **Saved** out of

@@ -33,3 +33,19 @@ plugins/<plugin>/skills/<skill>/SKILL.md
 
 Skills follow the Agent Skills format (`SKILL.md` with `name` and
 `description`), so Cursor and Codex can use them too.
+
+## Use in Codex and Cursor
+
+Claude Code fills two placeholders in skill text itself: the plugin-root
+placeholder and the plugin settings. Codex and Cursor do not, so each skill
+that uses them starts with a short note telling the agent to fill them in.
+
+Settings live in one file, `~/.config/ez-skills/settings.json`
+(`$XDG_CONFIG_HOME/ez-skills/settings.json` when that variable is set), keyed
+by plugin name and then by the setting name from the plugin's `userConfig`:
+
+```json
+{"ez-core": {"research_dir": "/path/to/research/"}}
+```
+
+A missing file or key means the setting is empty.
