@@ -8,8 +8,10 @@ description: >-
   short task-brief variant when a task resolves. May run the repo's formatter
   first; commits only after the user answers with a variant number or their
   own message. Use when the user asks for a commit message, asks what the
-  commit should say, says olcm, or invokes /olcm. Not for grouping or staging
-  files into several commits (use ccf).
+  commit should say, says olcm, or invokes /olcm, and whenever the agent is
+  about to propose a commit or a commit message itself (after a fix, when a
+  step or task completes, at the end of work): never write one by hand. Not
+  for grouping or staging files into several commits (use ccf).
 argument-hint: "[scope: staged | <paths> | <commit range>]"
 ---
 
@@ -75,7 +77,9 @@ Find the task, first match:
 3. A task file visible in the chat.
 
 Task docs live in `tasks/<id>_*/` in the repo, or in the org repo setting
-(`<org repo>/<repo folder name>/tasks/`). Never invent a task id.
+(`<org repo>/<repo folder name>/tasks/`). Never invent a task id, and never
+put one in a message (no `Task: <id>` line, no id in the subject): a task id
+is internal. A message names the task only through its ticket suffix.
 
 When found, read the briefing (`task_briefing.md`), `task_meta.json` and the
 steps file (`suggested_steps.md`) when present. The step: the worktree

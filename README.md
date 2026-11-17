@@ -7,7 +7,7 @@ this repository.
 
 | Plugin | Skills |
 | --- | --- |
-| `ez-core` | `wdyr` — researched recommendations; `auto-run` — work without stopping (with `/goal`); `ccf` — group changed files into commits; `check-code` — DRY, SSOT and best-practice audit; `short-message` — plain-text message to send; `olcm` — commit messages for the current changes; `refine-prompt` — handoff prompt for a fresh chat from rough notes |
+| `ez-core` | `wdyr` — researched recommendations; `auto-run` — work without stopping (with `/goal`); `ccf` — group changed files into commits; `check-code` — DRY, SSOT and best-practice audit; `short-message` — plain-text message to send; `olcm` — commit messages for the current changes; `refine-prompt` — handoff prompt for a fresh chat from rough notes; hook: commit messages only from `olcm` or `ccf` |
 
 ## Install in Claude Code
 
@@ -29,6 +29,7 @@ so every pushed commit is a new version.
 .claude-plugin/marketplace.json   catalog
 plugins/<plugin>/.claude-plugin/plugin.json
 plugins/<plugin>/skills/<skill>/SKILL.md
+plugins/<plugin>/hooks/hooks.json     Claude Code hooks (ez-core: commit rule)
 ```
 
 Skills follow the Agent Skills format (`SKILL.md` with `name` and
