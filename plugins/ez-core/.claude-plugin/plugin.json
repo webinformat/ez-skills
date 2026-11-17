@@ -1,6 +1,6 @@
 {
   "name": "ez-core",
-  "description": "Core working skills: wdyr (researched recommendations), auto-run (work without stopping), ccf (group changed files into commits), check-code (DRY, SSOT and best-practice audit), short-message (plain-text message to send), olcm (commit messages for the current changes), refine-prompt (handoff prompt for a fresh chat from rough notes); a commit-message rule and hook: messages come only from olcm or ccf",
+  "description": "Core working skills: wdyr (researched recommendations), auto-run (work without stopping), ccf (group changed files into commits), check-code (DRY, SSOT and best-practice audit), short-message (plain-text message to send), olcm (commit messages for the current changes), refine-prompt (handoff prompt for a fresh chat from rough notes), fc (Figma cache with a category index); a commit-message rule and hook: messages come only from olcm or ccf",
   "author": {
     "name": "Ciprian"
   },
@@ -44,6 +44,11 @@
       "type": "string",
       "title": "olcm ticket URL",
       "description": "Base URL put before a task ticket stored as a path (e.g. https://example.monday.com/), so olcm appends a full link. Leave empty to append the ticket as stored."
+    },
+    "figma_cache_dir": {
+      "type": "directory",
+      "title": "fc Figma cache folder",
+      "description": "Folder where fc keeps cached Figma MCP responses and their index. Leave empty to use figma/cache in the current repo."
     }
   }
 }
