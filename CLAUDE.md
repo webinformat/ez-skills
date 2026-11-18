@@ -13,7 +13,7 @@ anyone.
   internal tools.
 - Subject: `<skill or area>: <what changed>`. Add a body only to list more of
   what changed (settings, behavior), never history or reasons.
-- Keep the `Co-Authored-By` trailer.
+- No `Co-Authored-By` or other agent attribution line.
 
 Good: `check-code skill: DRY, SSOT and best-practice audit of changed or named code`
 
