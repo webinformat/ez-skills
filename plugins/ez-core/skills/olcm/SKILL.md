@@ -23,7 +23,7 @@ Arguments: `$ARGUMENTS`
 
 Two turns, always: turn 1 is the messages and a question; turn 2 is the
 user's answer, which commits. Never stage or commit in the reply that carries
-the messages.
+the messages. The one exception is auto-run mode (§ 7).
 
 ## Settings
 
@@ -214,3 +214,10 @@ with the user's text. Any other wording is not an answer: nothing is staged.
 - Never push unless asked. Approval covers this commit only.
 
 Reply after the commit: the hash and subject.
+
+## 7. Auto-run mode
+
+While the auto-run skill (ez-core:auto-run) is on, olcm runs in one turn:
+write the variants as § 4 says, then commit at once with variant 1 as § 6
+does, without showing the question. Reply in one line: the hash and subject.
+Pushing stays with the auto-run skill's push rule.

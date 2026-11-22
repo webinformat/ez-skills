@@ -22,7 +22,9 @@ RULE = (
     "by its ticket. When work ends "
     "with uncommitted changes, report what changed and say it is uncommitted; "
     "do not volunteer a commit message or a commit command. Commit only after "
-    "the user picks a message."
+    "the user picks a message. The one exception: while auto-run mode is on "
+    "(ez-core:auto-run), olcm commits with its variant 1 without asking "
+    "(olcm § 7)."
 )
 
 CCF = re.compile(
