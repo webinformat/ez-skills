@@ -7,7 +7,7 @@ this repository.
 
 | Plugin | Skills |
 | --- | --- |
-| `ez-core` | `wdyr` — researched recommendations; `auto-run` — work without stopping (with `/goal`); `ccf` — group changed files into commits; `check-code` — DRY, SSOT and best-practice audit; `short-message` — plain-text message to send; `olcm` — commit messages for the current changes; `refine-prompt` — handoff prompt for a fresh chat from rough notes; `fc` — Figma cache with a category index; `clarify-work` — verified artifact page to clarify issues and pending items; `cr` — read a request back and start nothing until `acr`; `sql-query` — permission-checked MSSQL, MySQL and PostgreSQL queries, direct or over SSH; hook: commit messages only from `olcm` or `ccf` |
+| `ez-core` | `wdyr` — researched recommendations; `auto-run` — work without stopping (with `/goal`); `ccf` — group changed files into commits; `check-code` — DRY, SSOT and best-practice audit; `short-message` — plain-text message to send; `olcm` — commit messages for the current changes; `refine-prompt` — handoff prompt for a fresh chat from rough notes; `fc` — Figma cache with a category index; `clarify-work` — verified artifact page to clarify issues and pending items; `cr` — read a request back and start nothing until `acr`; `sql-query` — permission-checked MSSQL, MySQL and PostgreSQL queries, direct or over SSH; `ssh-cmd` — permission-checked commands on a named server over SSH; hook: commit messages only from `olcm` or `ccf` |
 
 ## Install in Claude Code
 
