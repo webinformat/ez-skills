@@ -97,25 +97,25 @@ Delete a Contact, Pagination).
    them. Never ask the user how to read a contact's events: run `search`,
    then `activities` with the id.
 2. Each activity has `action_type`, `created_at` and `action_data`:
-   1. `FM_APP_EVENTS`: a custom event sent by the browser tracking code or
-      the marketer events API; `action_data.name` is the event name, and
+   1. `FM_APP_EVENTS`: a custom event sent by the browser tracking code
+      (`FM.trackCustomEvent`); `action_data.name` is the event name, and
       repeats of the same name are one activity with a `count` and a
       `last_occurrence`, not separate rows;
-   2. `APP_EVENTS`: a custom event sent from a server, with the same fields.
-      A search for custom events counts **both** types;
+   2. `APP_EVENTS`: a custom event sent from a server through the track API
+      (`/track/events`), with the same fields. A search for custom events
+      counts **both** types;
    3. `FM_PAGE_VIEWS`: tracked web page views;
    4. `FM_ENTERED_JOURNEY` / `FM_EXITED_JOURNEY`: `action_data.journey_name`;
    5. `FM_WHATSAPP_MESSAGE_…` (`…_DELIVERED`, `…_READ`, `…_SEND_ERROR`):
       `action_data.campaign_name`;
    6. CRM changes such as `CREATE`, `OWNER_CHANGE`, `CONTACT_STATUS_CHANGED`.
-3. Browser events can show up minutes after they are sent, and not
-   necessarily on the contact of the email in the payload: events sent for a
-   second email from the same browser can land on the first email's contact.
-   Freshworks identifies a contact by email address and browser cookie ID,
-   and the same browser session updates the existing contact
+3. Freshworks identifies a contact by email address and browser cookie ID: a
+   form submitted again from the same browser session updates the existing
+   contact instead of creating a new one
    ([How to set up the tracking code?](https://crmsupport.freshworks.com/support/solutions/articles/50000003312-how-to-set-up-the-tracking-code-)).
-   Check again before concluding an event is missing, and test each account
-   in a fresh browser profile or a private window.
+   When several contacts match, the data goes to the one with the most recent
+   activity ([JavaScript library](https://crmsupport.freshworks.com/support/solutions/articles/50000002446-javascript-library)).
+   Test each account in a fresh browser profile or a private window.
 
 ## Delete a contact
 
