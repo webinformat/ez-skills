@@ -7,7 +7,8 @@ description: >-
   task itself. Use when the user pastes rough notes and asks to refine, improve
   or enhance a prompt, asks for a handoff prompt, says refine-prompt, or
   invokes /refine-prompt. Not for reading back a request before work starts,
-  or for a message to send to a person.
+  for a message to send to a person, or for continuing this session's work
+  in a new session (use continue-prompt).
 argument-hint: "[rough notes]"
 ---
 
