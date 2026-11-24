@@ -35,18 +35,27 @@ The user gets one pick they can act on, not a survey.
 3. **Decide.** Rank against the constraints: fit with what exists,
    maintenance, security, simplicity, cost, performance (in that order unless
    the user named a priority). Pick one.
-4. **Save** the research to a folder, picked in this order:
-   1. the plugin setting `research_dir`: `${user_config.research_dir}` — not
-      set when that value is empty or the settings file has no such key;
-   2. when the setting is not set, the research folder the user's
-      instructions name;
-   3. when neither names a folder, save nothing and leave **Saved** out of
-      the reply.
+4. **Save** the research as a note named `YYYYMMDD-HHmm-<slug>.md`, with
+   the question, timestamp, every option with its number and condition,
+   sources with dates, and what was not checked. Where it goes, in this
+   order:
+   1. the plugin setting `research_command`:
+      `${user_config.research_command}` — not set when that value is empty
+      or the settings file has no such key. Write the note to a temporary
+      file, then run the command with these arguments added after it:
+      - a new note: `put <name> --new --file <temporary file>`;
+      - the user's pick: `append <name> --file <temporary file>`, the file
+        holding only the text to add, starting with a blank line.
 
-   The file is `YYYYMMDD-HHmm-<slug>.md` with the question, timestamp, every
-   option with its number and condition, sources with dates, and what was not
-   checked. When the user picks, append `## Selected` (option, timestamp, the
-   user's words); rewrite nothing earlier.
+      The command exits non-zero → the note is not saved: say so in one line
+      with the command's error, and never save it anywhere else.
+   2. when the setting is not set, the research folder the user's
+      instructions name: the note is a file there;
+   3. when neither is set, save nothing and leave **Saved** out of the
+      reply.
+
+   When the user picks, add `## Selected` (option, timestamp, the user's
+   words) at the end of the note; rewrite nothing earlier.
 5. **Reply** in the format below, then stop. A recommendation is not approval
    to implement it.
 
@@ -59,7 +68,8 @@ Short: readable in a few seconds.
 3. **Option 2, 3 …** — one line each: "when <condition>, <alternative>".
    Omit when there are none.
 4. **Not checked** — one line, only for what cannot be checked at all.
-5. **Saved** — the research file as a link, when one was saved.
+5. **Saved** — the note as a link, when one was saved: the URL the command
+   prints (a `page: <url>` line), else the file in the folder.
 
 Every choice carries an `Option N` label so the user can answer with a digit.
 

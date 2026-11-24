@@ -46,7 +46,7 @@ Settings live in one file, `~/.config/ez-skills/settings.json`
 by plugin name and then by the setting name from the plugin's `userConfig`:
 
 ```json
-{"ez-core": {"research_dir": "/path/to/research/"}}
+{"ez-core": {"research_command": "python3 /path/to/notes.py research"}}
 ```
 
 A missing file or key means the setting is empty.

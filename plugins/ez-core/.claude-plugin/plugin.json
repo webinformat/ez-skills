@@ -5,10 +5,10 @@
     "name": "Ciprian"
   },
   "userConfig": {
-    "research_dir": {
-      "type": "directory",
-      "title": "wdyr research folder",
-      "description": "Folder where wdyr saves each recommendation's research. Leave empty to save only when your instructions name a folder."
+    "research_command": {
+      "type": "string",
+      "title": "wdyr research command",
+      "description": "Command that saves each recommendation's research. wdyr runs it with `put <name> --new --file <file>` for a new note and `append <name> --file <file>` for the user's pick, and links the `page: <url>` line it prints. Leave empty to save only when your instructions name a folder."
     },
     "org_repo": {
       "type": "directory",
