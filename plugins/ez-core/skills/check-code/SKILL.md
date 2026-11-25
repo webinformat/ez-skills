@@ -30,9 +30,11 @@ no such key.
 
 - Shared coding guides: `${user_config.coding_guides}` (comma-separated
   folders)
-- Audit folder: `${user_config.audit_dir}` (`<project>` stands for the main
-  repo's folder name: the parent of `git rev-parse --git-common-dir`, so a
-  worktree maps to its main repo)
+- Audit command: `${user_config.audit_command}` (saves each audit as a
+  document; when set, it wins over the audit folder)
+- Audit folder: `${user_config.audit_dir}`
+- In both, `<project>` stands for the main repo's folder name: the parent of
+  `git rev-parse --git-common-dir`, so a worktree maps to its main repo.
 
 ## Arguments
 
@@ -239,8 +241,12 @@ Finding N of M — should we fix this?
 
 - **Chat:** the fix summary, then the questions. Nothing else; the full
   report only on request, in the audit file's shape.
-- **Audit file:** when the audit folder setting is set and that folder
-  exists, write it after the first fix and update it after each one, per
-  [references/audit-file.md](references/audit-file.md). Nothing fixed → no
-  file. Setting set but folder missing → say so in one line, no file.
+- **Audit file:** write it after the first fix and update it after each
+  one, per [references/audit-file.md](references/audit-file.md). Nothing
+  fixed → no file. Where it goes, first that applies:
+  1. the audit command setting: the document `audits/<file name>` of
+     `<project>`, saved through the command as the reference says;
+  2. the audit folder setting, when that folder exists; set but missing →
+     say so in one line, no file;
+  3. neither set → no file.
 - The audit never commits; commit only when the user asks.

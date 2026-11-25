@@ -1,7 +1,25 @@
 # Audit file
 
-Path: `<audit folder>/YYYYMMDD_<scope-slug>_code.md` (date from `date
-'+%Y%m%d'`). Written after the first fix, updated after each fix.
+File name: `YYYYMMDD_<scope-slug>_code.md` (date from `date '+%Y%m%d'`),
+at `audits/<file name>` through the audit command, else in the audit folder.
+Written after the first fix, updated after each fix.
+
+## Saving through the audit command
+
+Write the text to a temporary file, then run the command with these
+arguments added after it:
+
+- a new audit: `put <project> audits/<file name> --new --file <temporary file>`;
+- an update: `put <project> audits/<file name> --stamp <stamp> --file
+  <temporary file>`, with the stamp the previous `put` printed;
+- the index: `get <project> audits/INDEX.md --out <temporary file>` reads it
+  and prints its stamp; when it fails because there is no index yet, create
+  it with `put … --new`, else write it back with `put … --stamp <stamp>`.
+
+The command exits non-zero on a write → the audit is not saved: say so in
+one line with the command's error, and never save it anywhere else. A
+refused stamp means the document changed: read it again with `get`, merge,
+and write once more.
 
 ## Shape
 
@@ -61,7 +79,8 @@ N. <action> — why, effort S/M/L
   symbols in scope.`
 - Fixes applied: one row per finding; status `done`, `wontfix` (the user
   answered skip) or `open`. Status `closed` when no row is `open`.
-- An `INDEX.md` in the audit folder gets one row per audit file:
+- An `INDEX.md` next to the audits (`audits/INDEX.md` through the command,
+  else in the audit folder) gets one row per audit file:
   `| Date | Scope | Type | Open | File |`, Type `code`, Open = rows still
   `open`. Create the index when it is missing.
 - Examples use generic names; never copy secrets or personal data into the

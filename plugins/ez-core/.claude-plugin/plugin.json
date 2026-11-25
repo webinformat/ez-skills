@@ -33,7 +33,12 @@
     "audit_dir": {
       "type": "string",
       "title": "check-code audit folder",
-      "description": "Folder where check-code writes audit files; <project> stands for the repo's folder name (e.g. /work/org/<project>/tasks/audits). Leave empty to write no audit files."
+      "description": "Folder where check-code writes audit files when no audit command is set; <project> stands for the repo's folder name (e.g. /work/audits/<project>). Leave empty to write no audit files."
+    },
+    "audit_command": {
+      "type": "string",
+      "title": "check-code audit command",
+      "description": "Command that saves each audit instead of the audit folder. check-code runs it with `get <project> audits/<file> --out <file>` to read a document and `put <project> audits/<file> --file <file>` plus `--new` or `--stamp <stamp>` to write one. Leave empty to use the audit folder."
     },
     "plain_letters": {
       "type": "boolean",
