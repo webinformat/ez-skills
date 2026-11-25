@@ -30,7 +30,6 @@ the messages. The one exception is auto-run mode (§ 7).
 A plugin setting is not set when its value is empty or the settings file has
 no such key.
 
-- Org repo: `${user_config.org_repo}` — a second place to look for task docs.
 - Ticket URL: `${user_config.ticket_url}` — base URL put before a ticket
   stored as a path (see **Ticket suffix**).
 
@@ -76,9 +75,8 @@ Find the task, first match:
 2. A task the user names (id, folder, ticket).
 3. A task file visible in the chat.
 
-Task docs live in `tasks/<id>_*/` in the repo, or in the org repo setting
-(`<org repo>/<repo folder name>/tasks/`). Never invent a task id, and never
-put one in a message (no `Task: <id>` line, no id in the subject): a task id
+Task docs live in `tasks/<id>_*/` in the repo. Never invent a task id, and
+never put one in a message (no `Task: <id>` line, no id in the subject): a task id
 is internal. A message names the task only through its ticket suffix.
 
 When found, read the briefing (`task_briefing.md`), `task_meta.json` and the

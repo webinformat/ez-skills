@@ -69,8 +69,8 @@ assets, styles, dev pages and that work's docs. Group titles are work labels
 
 Find the work units from, in order:
 
-1. Task docs in the repo or the org repo (`tasks/<id>_*/` with a briefing,
-   steps or `task_meta.json`): one group per step. The step: the worktree
+1. Task docs in the repo (`tasks/<id>_*/` with a briefing, steps or
+   `task_meta.json`): one group per step. The step: the worktree
    branch (`task/<id>-step-<N>`) → the step the session names → the current
    step in the task docs. Never invent task ids.
 2. Component and section paths (`Section/Stats/*` → the stats group).

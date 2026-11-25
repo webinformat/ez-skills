@@ -12,8 +12,8 @@
     },
     "org_repo": {
       "type": "directory",
-      "title": "ccf and olcm org repo",
-      "description": "Repo that `ccf org` uses and where olcm also looks for task docs. Leave empty if you have none."
+      "title": "ccf org repo",
+      "description": "Repo that `ccf org` uses. Leave empty if you have none."
     },
     "project_dirs": {
       "type": "string",
