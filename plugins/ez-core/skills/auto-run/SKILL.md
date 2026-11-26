@@ -53,8 +53,9 @@ active. Stop there.
 3. **Push once, at the end.** No push and no push question while work
    remains. When everything else in the goal is done, ask one question that
    covers every pending push (repo, branch, commits, and whether it deploys).
-   A done condition that can only be proven after a push or a deploy waits
-   for that answer; after the yes, prove it on the live result, then report.
+   A done condition never waits for that push: it is checked on the change
+   where it is (the worktree or branch). Only a step whose goal is a deploy
+   is checked on the live deploy, after the yes, then reported.
 4. **Still asked, mode or not.** Stop and ask for: the push above, deploy,
    deleting files or data, sending or publishing anything, and any command
    that runs on a server.
