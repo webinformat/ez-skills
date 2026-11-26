@@ -28,8 +28,6 @@ linter's: passing lint or a clean `/code-review` is never a clean check-code.
 A plugin setting is not set when its value is empty or the settings file has
 no such key.
 
-- Shared coding guides: `${user_config.coding_guides}` (comma-separated
-  folders)
 - Audit command: `${user_config.audit_command}` (saves each audit as a
   document; when set, it wins over the audit folder)
 - Audit folder: `${user_config.audit_dir}`
@@ -68,7 +66,8 @@ Read each in full this turn; a `grep` hit is evidence, not reading.
 1. **The repo's own rules:** `CLAUDE.md`, `AGENTS.md`, and the coding docs in
    the repo (`ls docs/`; UI guides such as `docs/ui/*` when the scope touches
    visuals).
-2. **Shared guides:** `ls` every folder in the coding guides setting. Read the
+2. **Shared guides:** `ls` the [guides](guides/) folder next to this file
+   (`${CLAUDE_PLUGIN_ROOT}/skills/check-code/guides`). Read the
    general guide and every guide whose language, framework or topic the scope
    touches (the file names say which). The listing is the inventory, not
    memory.
