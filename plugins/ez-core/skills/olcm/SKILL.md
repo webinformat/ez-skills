@@ -154,8 +154,13 @@ delivers**, so a reader of `git log` learns both without opening the diff.
 The question line first, then variants 1–5, each as the bare number in prose
 and its own fenced block. No lead-in, no angle summaries, no descriptions.
 
+The question line names where the commit goes: the repo's folder name (in a
+git worktree, the main repo's, from the parent of
+`git rev-parse --path-format=absolute --git-common-dir`) and the current
+branch (`git branch --show-current`).
+
 ````text
-Commit with one of the following options or commit with "message"
+Commit to shop-web on main with one of the following options or commit with "message"
 
 1.
 
